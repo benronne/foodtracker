@@ -1,0 +1,29 @@
+!!!
+
+%html
+	%head
+		%title FoodTracker | Simple Daily Food Tracker
+		%meta{name: "vewport", content: "initial-scale=1"}
+		%link{rel: "stylesheet", href: "/stylesheet.css", type: "text/css"}
+	%body
+		-if flash[:notice]
+			.notice=flash[:notice]
+		-if flash[:alert]
+			.alert=flash[:alert]
+		#navigation
+			%ul.nav
+				%li.nav
+					%a{href: '/'} Home
+				-if current_user
+					%li.nav
+						%a{href: "/users/#{current_user.id}"} Activity
+					%li.nav
+						%a{href: '/log'} Log a Food
+					%li.nav
+						%a{href: '/logout'} Logout
+				-else
+					%li.nav
+						%a{href: '/login'} Login
+					%li.nav
+						%a{href: 'register'} Register
+		=yield
