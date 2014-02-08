@@ -1,0 +1,7 @@
+%h2
+	Log a Food
+
+%form{action: '/log', method: 'POST'}
+	%label{for: 'name'} What did you eat?
+	%input{name: 'name'}
+	%input{type: 'submit', value: 'Save Food'}

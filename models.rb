@@ -7,18 +7,23 @@ class User < ActiveRecord::Base
 	def encrypt_password
 		if self.password.present?
 			self.password_salt = BCrypt::Engine.generate_salt
-			self.passwrod_hash = BCrypt::Engine.hash_secret(password, password_salt)
+			self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
 		end
 	end
-end
 
-def self.authenticate(email, password)
-	user = User.where(email: email).first
-	if user && user.password_hasn == BCrypt::Engine.hash_secret(password, user.password_salt)
-		user
-	else
-		nil
+
+	def self.authenticate(email, password)
+		user = User.where(email: email).first
+		if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+			user
+		else
+			nil
+		end
 	end
+
+	has_many :foods
+	has_many :days
+
 end
 
 class Day < ActiveRecord::Base

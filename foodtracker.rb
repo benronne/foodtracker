@@ -36,7 +36,7 @@ end
 post '/login' do
 	@user = User.authenticate(params['user']['email'], params['user']['password'])
 	if @user
-		session[:user_id] = @user.user_id
+		session[:user_id] = @user.id
 		flash[:notice] = "Welome back!"
 		redirect "/users/#{current_user.id}"
 	else
@@ -71,7 +71,15 @@ get '/log' do
 end
 
 post '/log' do
-
+	if current_user
+		@food = Food.new(name: params['name'], created_at: Time.now, user_id: current_user.id)
+		if @food.save
+			flash[:notice] = "Good job!"
+		else
+			flash[:alert] = "Uh oh.  Something went wrong."
+		end
+			redirect "/users/#{current_user.id}"
+	end
 end
 
 get '/logout' do

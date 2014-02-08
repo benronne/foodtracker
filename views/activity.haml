@@ -1,0 +1,10 @@
+%h2
+	Your Activity
+
+-if @user == current_user
+	%a{href: '/log'} Log a Food
+
+/ -@food.each do |food|
+/ 	=food.name
+/ 	%br
+/ 	=food.created_at.strftime('%A, %B %e %Y')
