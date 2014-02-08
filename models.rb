@@ -22,13 +22,6 @@ class User < ActiveRecord::Base
 	end
 
 	has_many :foods
-	has_many :days
-
-end
-
-class Day < ActiveRecord::Base
-	belongs_to :user
-	has_many :foods
 end
 
 class Food < ActiveRecord::Base

@@ -10,18 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208191542) do
-
-  create_table "days", force: true do |t|
-    t.integer  "user_id"
-    t.datetime "created_at"
-  end
+ActiveRecord::Schema.define(version: 20140208212058) do
 
   create_table "foods", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.integer  "user_id"
-    t.integer  "day_id"
   end
 
   create_table "users", force: true do |t|

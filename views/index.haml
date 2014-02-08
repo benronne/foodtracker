@@ -1,2 +1,8 @@
 %h1
 	Food Tracker | Simple Daily Food Tracking
+
+-if current_user
+	%a{href: '/log'} Log a Food
+
+-else
+	%a{href: '/register'} Register Now

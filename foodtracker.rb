@@ -63,6 +63,7 @@ end
 
 get '/users/:id' do
 	@user = User.find(params[:id])
+	@food = @user.foods.find(:all, :order => 'created_at DESC')
 	haml :activity
 end
 
