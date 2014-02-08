@@ -1,12 +1,14 @@
-%h2
-	Your Activity
+#header
+	%h2
+		Your Activity
 
 -if @user == current_user
-	%a{href: '/log'} Log a Food
+	.new_food_button
+		%a{href: '/log'} Log a Food
 
 -@food.each do |food|
-	%br
-	%br
-	=food.created_at.strftime('%b %e, %Y %l:%M %p')
-	%br
-	=food.name
+	.foods
+		.food_time
+			=food.created_at.strftime('%b %e, %Y %l:%M %p')
+		.food_name
+			=food.name

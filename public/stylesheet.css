@@ -1,0 +1,297 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background-image:url('images/peas.jpg');
+	background-repeat: repeat;
+	padding: 0px 20px;
+	font-size: 12pt;
+	font-family: 'Comic Sans MS', 'ChalkboardSE-Regular', sans-serif;
+}
+
+#form_wrapper {
+	width: 80%;
+	padding: 20px 40px;
+	margin: 20px auto;
+	background-color: #ffffff;
+	/*border: 1px solid #000000;*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.login_form {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#navigation {
+	width: 80%;
+	padding: 20px 40px;
+	margin: 20px auto;
+	background-color: #ffffff;
+	/*border: 1px solid #000000;*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	text-align: center;
+	text-transform:uppercase;
+}
+
+ul.nav {
+	list-style-type: none;
+}
+
+li.nav {
+	display: inline-block;
+	margin: 10px 25px 10px 25px;
+}
+
+.notice {
+	background-color: #ffffff;
+	color: #008000;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.alert {
+	background-color: #ffffff;
+	color: #ff0000;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#header {
+	width: 80%;
+	padding: 20px 40px;
+	margin: 20px auto;
+	background-color: #ffffff;
+	/*border: 1px solid #000000;*/	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+h1 {
+	font-size: 48pt;
+	font-weight: bold;
+	margin: 0px 0px 20px 0px;
+	color: #551a8b;
+	text-align: center;
+}
+
+h2 {
+	font-size: 36pt;
+	color: #ff0000;
+	text-align: center;
+}
+
+h3 {
+	font-size: 32pt;
+	font-weight: bold;
+	margin: 0px 0px 20px 0px;
+	color: #ff0000;
+
+}	
+
+.new_food {
+	width: 15%;
+	margin: 20px 10px 0px 0px;
+	padding: 10px;
+	font-size: 12pt;
+	border: 1px solid #666666;
+
+}
+
+.foods {
+	width: 80%;
+	padding: 20px 40px;
+	margin: 20px auto;
+	background-color: #ffffff;
+	/*border: 1px solid #000000;*/	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.food_name {
+	margin: 0px 0px 5px 0px;
+	font-size: 24pt;
+	font-weight: bold;
+
+}
+
+.food_time {
+	margin: 10px 0px;
+	color: #999999;
+}
+
+form {
+	width: 100%;
+}
+
+label {
+	width: 50%;
+	margin: 5px;
+	display: inline-block;
+}
+
+input {
+	width: 30%;
+	margin: 5px;
+}
+
+input[type="submit"] {
+	width: 100px;
+	margin: 5px;
+}
+
+.new_food_button {
+	width: 130px;
+	margin: 20px 0px 0px 0px;
+	padding: 10px;
+	font-size: 14pt;
+	border: 1px solid #000000;
+}
+
+.new_food {
+	width: 100%;
+	margin: 0px;
+	border: none;
+}
+
+.new_food label {
+	width: 20%;
+	margin: 10px 0px;
+	font-size: 18pt;
+	display: block;
+}
+
+.new_food input {
+	width: 100px;
+	margin: 10px 0px 20px 0px;
+	display: block;
+}
+
+.new_food input[type="submit"] {
+	width: 100px;
+	margin: 5px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:active{
+	text-decoration: none;
+	color: #000000;
+}	
+
+/* Mobile Styling */
+
+@media (max-width: 480px) {
+	#navigation {
+		padding: 20px;
+	}
+
+	#header {
+		padding: 20px;
+	}
+	
+	.foods {
+		padding: 20px;
+	}
+
+	#form_wrapper {
+		padding: 20px;
+	}
+
+	label {
+		width: 100%;
+		margin: 5px auto;
+	}
+
+	input {
+		width: 100%;
+		margin: 5px auto;
+	}
+
+	input[type="submit"] {
+		width: 100px;
+		margin: 5px auto;
+		display: block;
+	}
+
+	.new_food label {
+		width: 100%;
+		margin: 5px auto;
+	}
+
+	.new_food input {
+		width: 100%;
+		margin: 5px auto;
+	}
+
+	.new_food input[type="submit"] {
+		width: 100px;
+		margin: 5px auto;
+		display: block;
+	}
+}

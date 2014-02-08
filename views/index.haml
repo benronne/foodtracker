@@ -1,8 +1,14 @@
-%h1
-	Food Tracker | Simple Daily Food Tracking
+#header
+	%h1
+		Simple Food Tracker
+
+	%h2
+		Simple Food Tracker is a basic tool for recording what you eat.  No calorie counts, not pre-populated foods, no extra buttons.
 
 -if current_user
-	%a{href: '/log'} Log a Food
+	.new_food_button
+		%a{href: '/log'} Log a Food
 
 -else
-	%a{href: '/register'} Register Now
+	.new_food_button
+		%a{href: '/register'} Register Now
