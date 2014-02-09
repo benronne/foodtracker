@@ -144,7 +144,7 @@ h3 {
 
 .foods {
 	width: 80%;
-	padding: 20px 40px;
+	padding: 30px 40px;
 	margin: 20px auto;
 	background-color: #00AA72;
 	/*border: 1px solid #000000;	
@@ -167,13 +167,15 @@ h3 {
 }
 
 .food_name {
-	margin: 0px 0px 5px 0px;
+	margin: 0px 0px 45px 0px;
+	padding: 0px;
 	font-size: 18pt;
 	font-weight: bold;
 }
 
 .food_time {
-	margin: 10px 0px;
+	margin: 0px;
+	padding: 0px;
 	color: #000000;
 }
 

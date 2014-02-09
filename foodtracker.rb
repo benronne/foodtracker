@@ -75,7 +75,7 @@ post '/log' do
 	if current_user
 		@food = Food.new(name: params['name'], created_at: Time.now, user_id: current_user.id)
 		if @food.save
-			flash[:notice] = "Good job!"
+			flash[:notice] = "Logged!"
 		else
 			flash[:alert] = "Uh oh.  Something went wrong."
 		end
