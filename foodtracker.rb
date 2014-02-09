@@ -50,7 +50,7 @@ get '/register' do
 end
 
 post '/register' do
-	@user = User.new(params['user'])
+	@user = User.new(params['user'], created_at: Time.now)
 	if @user.save
 		session[:user_id] = @user.id
 		flash[:notice] = "Welcome to FoodTracker!"
