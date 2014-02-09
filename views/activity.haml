@@ -6,10 +6,12 @@
 	-if @user == current_user
 		.new_food_button
 			%a{href: '/log'} Log a Food
-
--@food.each do |food|
-	.foods
-		.food
+.foods
+	-if @user.foods == []
+		.no_foods
+			You have no foods yet.
+	-else
+		-@food.each do |food|
 			.food_time
 				=food.created_at.strftime('%b %e, %Y %l:%M %p')
 			.food_name
