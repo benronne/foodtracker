@@ -2,9 +2,10 @@
 
 %html
 	%head
-		%title FoodTracker | Simple Daily Food Tracker
-		%meta{name: "vewport", content: "initial-scale=1"}
-		%link{rel: "stylesheet", href: "/stylesheet.css", type: "text/css"}
+		%title Simple Food Tracker | Just Food
+		%meta{name: 'viewport', content: 'initial-scale=1'}
+		%link{rel: 'stylesheet', href: '/stylesheet.css', type: 'text/css'}
+		%link{href: 'http://fonts.googleapis.com/css?family=Happy+Monkey|Permanent+Marker', rel: 'stylesheet', type: 'text/css'}
 	%body
 		-if flash[:notice]
 			.notice=flash[:notice]
@@ -12,16 +13,17 @@
 			.alert=flash[:alert]
 		#navigation
 			%ul.nav
-				%li.nav
-					%a{href: '/'} Home
 				-if current_user
 					%li.nav
-						%a{href: "/users/#{current_user.id}"} Activity
+						%a{href: "/users/#{current_user.id}"} Your Food
 					%li.nav
 						%a{href: '/log'} Log a Food
+
 					%li.nav
 						%a{href: '/logout'} Logout
 				-else
+					%li.nav
+						%a{href: '/'} Home
 					%li.nav
 						%a{href: '/login'} Login
 					%li.nav

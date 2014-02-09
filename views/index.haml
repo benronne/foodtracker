@@ -1,14 +1,14 @@
 #header
 	%h1
 		Simple Food Tracker
+.foods
+	%h3
+		Simple Food Tracker is a basic tool for recording what you eat.  No calorie counts, not pre-populated foods, no problem.
+	
+	-if current_user
+		.home_button
+			%a{href: '/log'} Log a Food
 
-	%h2
-		Simple Food Tracker is a basic tool for recording what you eat.  No calorie counts, not pre-populated foods, no extra buttons.
-
--if current_user
-	.new_food_button
-		%a{href: '/log'} Log a Food
-
--else
-	.new_food_button
-		%a{href: '/register'} Register Now
+	-else
+		.home_button
+			%a{href: '/register'} Register Now

@@ -1,10 +1,11 @@
 #header
 	%h2
-		Your Activity
+		Your Food
 
--if @user == current_user
-	.new_food_button
-		%a{href: '/log'} Log a Food
+.foods
+	-if @user == current_user
+		.new_food_button
+			%a{href: '/log'} Log a Food
 
 -@food.each do |food|
 	.foods
