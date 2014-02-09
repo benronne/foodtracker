@@ -123,7 +123,7 @@ li.nav {
 }
 
 h1 {
-	font-size: 48pt;
+	font-size: 44pt;
 	font-weight: bold;
 	margin: 0px 0px 20px 0px;
 	color: #ffffff;
@@ -141,15 +141,6 @@ h3 {
 	color: #ffffff;
 	text-align: center;
 } 
-
-.new_food {
-	width: 15%;
-	margin: 20px 10px 0px 0px;
-	padding: 10px;
-	font-size: 12pt;
-	border: 1px solid #666666;
-
-}
 
 .foods {
 	width: 80%;
@@ -230,7 +221,7 @@ input[type="submit"] {
 
 .new_food input {
 	width: 60%;
-	margin: 10px 0px 20px 0px;
+	margin: 20px 0px 20px 0px;
 	display: block;
 }
 

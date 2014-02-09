@@ -9,7 +9,8 @@
 
 -@food.each do |food|
 	.foods
-		.food_time
-			=food.created_at.strftime('%b %e, %Y %l:%M %p')
-		.food_name
-			=food.name
+		.food
+			.food_time
+				=food.created_at.strftime('%b %e, %Y %l:%M %p')
+			.food_name
+				=food.name
