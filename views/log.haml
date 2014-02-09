@@ -5,5 +5,5 @@
 	.new_food
 		%form{action: '/log', method: 'POST'}
 			%label{for: 'name'} What did you eat?
-			%input{name: 'name'}
+			%textarea{name: 'name'}
 			%input{type: 'submit', value: 'Save Food'}
