@@ -2,6 +2,7 @@ require 'bundler/setup'
 require 'sinatra'
 require 'haml'
 require 'sinatra/activerecord'
+ActiveRecord::Base.default_timezone = :local
 require 'rake'
 require 'chronic'
 require 'bcrypt'
